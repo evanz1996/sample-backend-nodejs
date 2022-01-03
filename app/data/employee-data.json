@@ -1,0 +1,38 @@
+[
+   {
+      "EmployeeId":1001,
+      "FirstName":"Christian",
+      "LastName":"Tania",
+      "Gender": "M",
+      "Age":26,
+      "Status":1,
+      "Address":"Manila City",
+      "OfficeAddress":"Mandaluyong City",
+      "CreatedDate":"2021-08-11T17:06:38.459Z",
+      "CreatedBy":"Admin.Job"
+   },
+   {
+      "EmployeeId":1002,
+      "FirstName":"Juan",
+      "LastName":"Dela Cruz",
+      "Gender": "F",
+      "Age":26,
+      "Status":2,
+      "Address":"Makati City",
+      "OfficeAddress":"Mandaluyong City",
+      "CreatedDate":"2021-08-11T17:06:38.459Z",
+      "CreatedBy":"Admin.Job"
+   },
+   {
+      "EmployeeId":1003,
+      "FirstName":"Layla",
+      "LastName":"Dela Lima",
+      "Gender": "F",
+      "Age":23,
+      "Status":2,
+      "Address":"Mandaluyong City",
+      "OfficeAddress":"Taguig City",
+      "CreatedDate":"2021-08-11T17:06:38.459Z",
+      "CreatedBy":"Admin.Job"
+   }
+]
