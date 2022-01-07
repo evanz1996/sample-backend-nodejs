@@ -1,41 +1,44 @@
 const fs = require('fs');
 
 function getEmployees() {
-    const jobDto = fs.readFileSync('./app/data/main-data.json');//use to test in index.js
-    var jobListDto = JSON.parse(jobDto);
-    return jobListDto;
+  const jobDto = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
+  var jobListDto = JSON.parse(jobDto);
+  console.log(jobListDto);
+  return jobListDto;
 }
 
 function validatePhoneNumber(phoneNumber) {
-    const users = fs.readFileSync('./app/data/main-data.json');//use to test in index.js
-    var userList = JSON.parse(users);
-    let userFilter = userList.filter(i => i.PhoneNumber == phoneNumber);
-    if(userFilter[0] != null){
-        return true;
-    }
+  const users = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
+  var userList = JSON.parse(users);
+  let userFilter = userList.filter((i) => i.PhoneNumber == phoneNumber);
+  if (userFilter[0] != null) {
+    return true;
+  }
 
-    return false;
-   
+  return false;
 }
 
 function validatePassCode(passCode, phoneNumber) {
-    const users = fs.readFileSync('./app/data/main-data.json');//use to test in index.js
-    var userList = JSON.parse(users);
-    let userFilter = userList.filter(i => i.PassCode == passCode && i.PhoneNumber == phoneNumber);
-    if(userFilter[0] != null){
-        return userFilter[0];
-    }
+  const users = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
+  var userList = JSON.parse(users);
+  let userFilter = userList.filter(
+    (i) => i.PassCode == passCode && i.PhoneNumber == phoneNumber
+  );
+  if (userFilter[0] != null) {
+    return userFilter[0];
+  }
 
-    return false;
-   
+  return false;
 }
 
-// function getEmployee(jobId) {
-//     const jobDto = fs.readFileSync('./app/data/main-data.json');//use to test in index.js
-//     var jobListDto = JSON.parse(jobDto);
-//     let job = jobListDto.filter(i => i.JobId == jobId);
-//     return job[0];
-// }
+function getSpecificEmployee(jobId) {
+  const jobDto = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
+  console.log(jobDto);
+  var jobListDto = JSON.parse(jobDto);
+  console.log(jobListDto);
+  let job = jobListDto.filter((i) => i.JobId == jobId);
+  return job[0];
+}
 
 // function postEmployee(employee) {
 //     const employeeDto = fs.readFileSync('./app/data/main-data.json');//use to test in index.js
@@ -107,6 +110,8 @@ function validatePassCode(passCode, phoneNumber) {
 exports.getEmployees = getEmployees;
 exports.validatePhoneNumber = validatePhoneNumber;
 exports.validatePassCode = validatePassCode;
+exports.getSpecificEmployee = getSpecificEmployee;
+
 // exports.getJob = getJob;
 // exports.postJob = postJob;
 // exports.putJob = putJob;
