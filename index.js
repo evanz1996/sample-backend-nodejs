@@ -1,7 +1,7 @@
 const employeeFunc = require('./app/function/employee.js');
 const express = require('express');
 const cors = require('cors');
-const PORT = process.env.PORT || 4011;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 app.use(cors());
