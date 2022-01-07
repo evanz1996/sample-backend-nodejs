@@ -1,11 +1,17 @@
 const employeeFunc = require('./app/function/employee.js');
 const express = require('express');
 const cors = require('cors');
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 4011;
 
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+app.get('/api/syr/fetchUser/:id', (req, res) => {
+  let result = employeeFunc.getSpecificEmployee(req.params.id);
+  console.log(result);
+  res.json(result);
+});
 
 app.get('/api/syr/users', (req, res) => {
   let result = employeeFunc.getEmployees();

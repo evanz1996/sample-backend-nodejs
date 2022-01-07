@@ -31,12 +31,11 @@ function validatePassCode(passCode, phoneNumber) {
   return false;
 }
 
-function getSpecificEmployee(jobId) {
+function getSpecificEmployee(id) {
   const jobDto = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
-  console.log(jobDto);
   var jobListDto = JSON.parse(jobDto);
-  console.log(jobListDto);
-  let job = jobListDto.filter((i) => i.JobId == jobId);
+  let job = jobListDto.filter((i) => i.Id == id);
+  console.log(job);
   return job[0];
 }
 
