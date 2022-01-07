@@ -8,7 +8,8 @@
         "CreatedBy": "Admin.Job",
         "UpdatedBy": "",
         "UpdatedDate": "",
-        "Purge": "N"
+        "Purge": "N",
+        "TypeOfUsers":"is_staff"
     },
     {
         "Id": 2,
@@ -19,6 +20,7 @@
         "CreatedBy": "Admin.Job",
         "UpdatedBy": "",
         "UpdatedDate": "",
-        "Purge": "N"
+        "Purge": "N",
+        "TypeOfUsers":"super_staff"
     }
 ]
