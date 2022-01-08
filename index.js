@@ -7,6 +7,20 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Create Users
+app.post('/api/syr/create', (req, res) => {
+  console.log(req.body);
+  let result = employeeFunc.postEmployee(req.body);
+  console.log(result);
+  res.json(result);
+});
+// Update Users
+app.put('/api/syr/updateuser/:id', (req, res) => {
+  console.log(req.body);
+  let result = employeeFunc.updateuser(req.body, req.params.id);
+  console.log(result);
+  res.json(true);
+});
 app.get('/api/syr/fetchUser/:id', (req, res) => {
   let result = employeeFunc.getSpecificEmployee(req.params.id);
   console.log(result);

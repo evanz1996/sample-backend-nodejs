@@ -39,53 +39,48 @@ function getSpecificEmployee(id) {
   return job[0];
 }
 
-// function postEmployee(employee) {
-//     const employeeDto = fs.readFileSync('./app/data/main-data.json');//use to test in index.js
-//     var empListDto = JSON.parse(jobDto);
-//     console.log(empListDto.length);
-//     if (empListDto.length == 0) {
-//         employee.JobId = 1;
-//     } else {
-//         empListDto.sort((a, b) => (a.JobId < b.JobId) ? 1 : ((b.JobId < a.JobId) ? -1 : 0));
-//         employee.JobId = +jobListDto[0].JobId + 1;
-//     }
+function updateuser(isesave, Id) {
+  const jobDto = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
+  var jobListDto = JSON.parse(jobDto);
+  let newJobList = jobListDto.filter(function (obj) {
+    return obj.Id !== +Id;
+  });
 
-//     let newJob = [job];
-//     let mergeData = [...jobListDto, ...newJob];
+  let jobParse = [isesave];
+  let mergeData = [...newJobList, ...jobParse];
+  let finalData = JSON.stringify(mergeData);
+  fs.writeFile('./app/data/main-data.json', finalData, (err) => {
+    // Error checking
+    if (err) throw err;
+    console.log('Updated');
+  });
 
-//     let finalData = JSON.stringify(mergeData);
+  return 'Success';
+}
 
-//     fs.writeFile("./app/data/main-data.json", finalData, (err) => {
-//         // Error checking
-//         if (err) throw err;
-//         console.log("New data added");
-//     });
+// CREATE
+function postEmployee(employee) {
+  console.log('employee', employee.length);
+  const employeeDto = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
+  var empListDto = JSON.parse(employeeDto);
+  console.log(empListDto.length);
+  if (Object.keys(employee).length != 0) {
+    let newJob = [employee];
+    let mergeData = [...empListDto, ...newJob];
 
-//     return "Success";
-// }
+    let finalData = JSON.stringify(mergeData);
 
-// function putJob(jobVm, jobId) {
-//     const jobDto = fs.readFileSync('./app/data/main-data.json');//use to test in index.js
-//     var jobListDto = JSON.parse(jobDto);
+    fs.writeFile('./app/data/main-data.json', finalData, (err) => {
+      // Error checking
+      if (err) throw err;
+      console.log('New data added');
+    });
 
-//     let newJobList = jobListDto.filter(function (obj) {
-//         return obj.JobId !== +jobId;
-//     });
+    return 'Success';
+  }
+}
 
-//     let jobParse = [jobVm];
-
-//     let mergeData = [...newJobList, ...jobParse];
-
-//     let finalData = JSON.stringify(mergeData);
-
-//     fs.writeFile("./app/data/main-data.json", finalData, (err) => {
-//         // Error checking
-//         if (err) throw err;
-//         console.log("Updated");
-//     });
-
-//     return "Success";
-// }
+// Update FUNCTION
 
 // function purgeJob(jobId) {
 //     const jobDto = fs.readFileSync('./app/data/main-data.json');//use to test in index.js
@@ -110,6 +105,8 @@ exports.getEmployees = getEmployees;
 exports.validatePhoneNumber = validatePhoneNumber;
 exports.validatePassCode = validatePassCode;
 exports.getSpecificEmployee = getSpecificEmployee;
+exports.updateuser = updateuser;
+exports.postEmployee = postEmployee;
 
 // exports.getJob = getJob;
 // exports.postJob = postJob;
