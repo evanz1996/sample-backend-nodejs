@@ -19,7 +19,7 @@ app.put('/api/syr/updateuser/:id', (req, res) => {
   console.log(req.body);
   let result = employeeFunc.updateuser(req.body, req.params.id);
   console.log(result);
-  res.json(true);
+  res.json(result);
 });
 app.get('/api/syr/fetchUser/:id', (req, res) => {
   let result = employeeFunc.getSpecificEmployee(req.params.id);
