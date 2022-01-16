@@ -31,6 +31,19 @@ function validatePassCode(passCode, phoneNumber) {
   return false;
 }
 
+function validatePassCode1(passCode, phoneNumber) {
+  const users = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
+  var userList = JSON.parse(users);
+  let userFilter = userList.filter(
+    (i) => i.PassCode == passCode && i.PhoneNumber == phoneNumber
+  );
+  if (userFilter[0] != null) {
+    return userFilter[0];
+  }
+
+  return false;
+}
+
 function getSpecificEmployee(id) {
   const jobDto = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
   var jobListDto = JSON.parse(jobDto);
@@ -107,6 +120,7 @@ exports.validatePassCode = validatePassCode;
 exports.getSpecificEmployee = getSpecificEmployee;
 exports.updateuser = updateuser;
 exports.postEmployee = postEmployee;
+exports.validatePassCode1 = validatePassCode1;
 
 // exports.getJob = getJob;
 // exports.postJob = postJob;

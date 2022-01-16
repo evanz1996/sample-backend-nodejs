@@ -50,6 +50,17 @@ app.get('/api/syr/validatepasscode/:passcode/:phonenum', (req, res) => {
   res.json(result);
 });
 
+app.post('/api/syr/validate', (req, res) => {
+  console.log(req.body);
+
+  let result = employeeFunc.validatePassCode1(
+    req.body.passCode,
+    req.body.phoneNum
+  );
+
+  res.json(result);
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
