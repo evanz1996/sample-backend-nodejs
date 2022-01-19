@@ -1,29 +1,45 @@
 [
   {
-    "Id": 2,
-    "Name": "Vanessa12",
-    "PhoneNumber": "09096254204",
-    "EmailAddress": "vans@gmail.com12",
-    "PassCode": "1234",
-    "is_staff": false,
-    "is_superUser": true
+    "id": "1",
+    "title": "user",
+    "user": {
+      "uuid": "1",
+      "email": "vanessavalenzuela@gmail.com",
+      "phone_number": "09096254204",
+      "password": "",
+      "phone_verified": true,
+      "deleted": false,
+      "user_state": "active",
+      "is_staff": false,
+      "is_superuser": false,
+      "pass_code": "1234"
+    },
+    "profile": {
+      "name": "Vanessa Valenzuela",
+      "gender": "Female",
+      "date_of_birth": "0001-01-01T00:00:00Z",
+      "facebook": "",
+      "instagram": "",
+      "tiktok": "",
+      "clubhouse": "",
+      "twitter": "",
+      "linkedin": "",
+      "location": "",
+      "education": "",
+      "job": "",
+      "bio": "",
+      "background_photo": "",
+      "user_level": 0
+    }
   },
   {
-    "Id": 3,
-    "Name": "Juan Robert Leynes1",
-    "PhoneNumber": "12341",
-    "EmailAddress": "juan@gmail.com1",
-    "PassCode": "1234",
-    "is_staff": false,
-    "is_superUser": true
-  },
-  {
-    "Id": 1,
-    "Name": "Gees M. 1",
-    "PhoneNumber": "09353198827",
-    "EmailAddress": "geez@gmail.com",
-    "PassCode": "1234",
-    "is_staff": false,
-    "is_superUser": true
+    "user": {
+      "uuid": "2",
+      "email": "asterginete@gmail.com44",
+      "phone_number": "+817040265994",
+      "is_staff": false,
+      "is_superuser": false
+    },
+    "profile": { "name": "Aster Ginete" }
   }
 ]
