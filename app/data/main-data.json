@@ -1,45 +1,64 @@
 [
   {
-    "id": "1",
-    "title": "user",
     "user": {
-      "uuid": "1",
-      "email": "vanessavalenzuela@gmail.com",
-      "phone_number": "09096254204",
-      "password": "",
+      "uuid": "c340839d-78c7-473e-8a68-7b216ef2e794",
+      "email": "asterginete@gmail.com44",
+      "phone_number": "+817040265994",
+      "password": "aster",
       "phone_verified": true,
       "deleted": false,
       "user_state": "active",
       "is_staff": false,
-      "is_superuser": false,
+      "is_superuser": true,
       "pass_code": "1234"
     },
     "profile": {
-      "name": "Vanessa Valenzuela",
-      "gender": "Female",
-      "date_of_birth": "0001-01-01T00:00:00Z",
-      "facebook": "",
-      "instagram": "",
-      "tiktok": "",
-      "clubhouse": "",
-      "twitter": "",
-      "linkedin": "",
-      "location": "",
-      "education": "",
-      "job": "",
-      "bio": "",
-      "background_photo": "",
-      "user_level": 0
+      "name": "Aster",
+      "gender": "Male",
+      "date_of_birth": "2022-01-20",
+      "facebook": "www.facebook.com/aster",
+      "instagram": "www.instagram.com/aster",
+      "tiktok": "www.tiktok.com/aster",
+      "clubhouse": "www.clubhouse.com/aster",
+      "twitter": "www.twitter.com/aster",
+      "linkedin": "www.linkedin.com/aster",
+      "location": " F. Roman St, Brgy. Balong Bato ,San Juan City , Philippines",
+      "education": "www.education.com/aster",
+      "job": "job1",
+      "bio": "bio1",
+      "background_photo": "https://lh3.googleusercontent.com/EsnD6K5KZEIKSSKKUSJHGKohOL_dYtVoh5yE-dSCOQIHtBO6DhsvzaZrKeekRJ6tUDHCSbXngfi0Gn_CQewkt8IprTA5bWwmShrEPwABug",
+      "user_level": "1"
     }
   },
   {
     "user": {
-      "uuid": "2",
-      "email": "asterginete@gmail.com44",
-      "phone_number": "+817040265994",
+      "uuid": "420f3dfa-2774-44da-92ef-e8d273b68e64",
+      "email": "vanessavalenzuela@gmail.com11",
+      "phone_number": "0909625420411",
+      "password": "vanessa11",
+      "phone_verified": true,
+      "deleted": false,
+      "user_state": "active",
       "is_staff": false,
-      "is_superuser": false
+      "is_superuser": true,
+      "pass_code": "1234"
     },
-    "profile": { "name": "Aster Ginete" }
+    "profile": {
+      "name": "Vanessa Valenzuela1",
+      "gender": "Female",
+      "date_of_birth": "2022-01-14",
+      "facebook": "www.facebook.com/vanessa11",
+      "instagram": "www.instagram.com/vanessa1instagram11",
+      "tiktok": "www.tiktok.com/vanessa1instagram11",
+      "clubhouse": "www.clubhouse.com/vanessa1",
+      "twitter": "www.twitter.com/vanessa1instagram11",
+      "linkedin": "www.linkedin.com/vanessa1instagram11",
+      "location": " F. Roman St, Brgy. Balong Bato ,San Juan City , Philippines1",
+      "education": "www.education.com/vanessa1education1",
+      "job": "job11",
+      "bio": "bio11",
+      "background_photo": "https://lh3.googleusercontent.com/EsnD6K5KZEIKSSKKUSJHGKohOL_dYtVoh5yE-dSCOQIHtBO6DhsvzaZrKeekRJ6tUDHCSbXngfi0Gn_CQewkt8IprTA5bWwmShrEPwABug",
+      "user_level": "0"
+    }
   }
 ]

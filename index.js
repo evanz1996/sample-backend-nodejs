@@ -23,17 +23,15 @@ app.post('/api/syr/create', (req, res) => {
   res.json(result);
 });
 // Update Loggin
-app.put('/api/syr/updateuser/:id', (req, res) => {
+app.put('/api/syr/updateLoggedInUser/:id', (req, res) => {
   console.log(req.body);
-  let result = employeeFunc.updateuser(req.body, req.params.id);
+  let result = employeeFunc.updateLoggedInUser(req.body, req.params.id);
   console.log(result);
   res.json(result);
 });
 // Update Users
 app.put('/api/syr/updateuser/:id', (req, res) => {
-  // console.log(req.body);
   let result = employeeFunc.updateuser(req.body, req.params.id);
-  // console.log(result);
   res.json(result);
 });
 app.get('/api/syr/fetchUser/:id', (req, res) => {
@@ -57,7 +55,7 @@ app.get('/v1/users/phone_login/:phonenum', (req, res) => {
   res.json(result);
 });
 
-app.get('/v1/users/passcode/:phonenum/:passcode/', (req, res) => {
+app.get('/v1/users/passcode/:passcode/:phonenum/', (req, res) => {
   let result = employeeFunc.validatePassCode(
     req.params.phonenum,
     req.params.passcode

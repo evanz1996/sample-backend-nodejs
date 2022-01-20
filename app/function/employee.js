@@ -97,7 +97,10 @@ function updateLoggedInUser(isesave, Id) {
   const jobDto = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
   var jobListDto = JSON.parse(jobDto);
   let newJobList = jobListDto.filter(function (obj) {
-    return obj.Id !== +Id;
+    console.log('param', Id);
+    // console.log(Id);
+    console.log(obj.id);
+    return obj.user.uuid != Id;
   });
 
   let jobParse = [isesave];
