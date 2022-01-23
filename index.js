@@ -34,13 +34,13 @@ app.put('/api/syr/updateuser/:id', (req, res) => {
   let result = employeeFunc.updateuser(req.body, req.params.id);
   res.json(result);
 });
-app.get('/api/syr/fetchUser/:id', (req, res) => {
+app.get('/v1/users/:id', (req, res) => {
   let result = employeeFunc.getSpecificEmployee(req.params.id);
-  // console.log(result);
   res.json(result);
 });
 
-app.get('/api/syr/users', (req, res) => {
+app.get('/v1/users/', (req, res) => {
+  console.log('im here, v1/users/');
   let result = employeeFunc.getEmployees();
   res.json(result);
 });
