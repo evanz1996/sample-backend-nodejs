@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // Create Users
-app.post('/v1/buyers/logout', (req, res) => {
+app.post('/v1/users/logout', (req, res) => {
   console.log('req body', req.body);
   let result = employeeFunc.logoutUser(req.body.refresh_token);
   console.log(result);
@@ -50,15 +50,29 @@ app.get('/api/syr', (req, res) => {
   res.json('true');
 });
 
-app.get('/v1/users/phone_login/:phonenum', (req, res) => {
-  let result = employeeFunc.validatePhoneNumber(req.params.phonenum);
+// app.get('/v1/users/phone_login/:phonenum', (req, res) => {
+//   let result = employeeFunc.validatePhoneNumber(req.params.phonenum);
+//   res.json(result);
+// });
+
+app.post('/v1/users/phone_login', (req, res) => {
+  console.log(req.body.phoneNumber);
+  let result = employeeFunc.validatePhoneNumber(req.body.phoneNumber);
   res.json(result);
 });
+// app.get('/v1/users/passcode/', (req, res) => {
+//   let result = employeeFunc.validatePassCode(
+//     req.body.phonenum,
+//     req.body.passcode
+//   );
+//   res.json(result);
+// });
 
-app.get('/v1/users/passcode/:passcode/:phonenum/', (req, res) => {
+app.post('/v1/users/passcode/', (req, res) => {
+  console.log(req);
   let result = employeeFunc.validatePassCode(
-    req.params.phonenum,
-    req.params.passcode
+    req.body.phoneNumber,
+    req.body.passCode
   );
   res.json(result);
 });

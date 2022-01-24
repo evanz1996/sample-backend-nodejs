@@ -27,23 +27,38 @@ function validatePhoneNumber(phoneNumber) {
   var userList = JSON.parse(users);
   let userFilter = userList.filter((i) => i.user.phone_number == phoneNumber);
   if (userFilter[0] != null) {
-    return true;
+    return '';
   }
-
-  return false;
+  return {
+    error: 'no user exists with given phone number',
+  };
 }
 
 function validatePassCode(phoneNumber, passCode) {
+  console.log('phonen', phoneNumber);
+  console.log('pass', passCode);
+  var dummyToken = {
+    refresh_token:
+      'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NDM2MzE0NTF9.Pg8UwhoqG_SGx7t084UW_r-i0GOjouun2D04dCjc669iFhnOMfdkC4HqaKpY3kKMeBXsP8XFOTBnut0qxNIePkpvNG5v82s5om-PiAnKHxaZsBGqk5o3sBu68zJQu2_X8Lu4NMcfIQYUdpChFD7i5_1QRcNT0-FhE_vd-NJv6FabwJPTP53mMCMX7uoX7rSe71XwM-Yht2rMpBYz1gc_cLuj49mjEjUmXnazU6Jum-pdGTIhi8rRyZ4ZxwfOWV6gGZuJZRCDjNMeFVLUlRHhnZ4Nw-PlNFOyAqAatJfGOT6z_xwN0PV6_jRvsb9Zy42v4CDl7rPG5ZYMosI0j-YLjNh13TN_SVcxenRGPzESziBhgDQM5ojDK2oyZ3ztilGAVTEYvNp5n0XltWCVvoWMjGo55tQnTTX2A4QwT8YQn35jlwZVk22FhDXlEmG2ODLEa9XQuHwVGWPurj9oTQHWqfXwNY3aAbQ4EL1eYEGPsv3LNNGu3eknOc5SDFR6Ceh7P4NWFnjbRJRtiLpLX1n77c7okkKRciEF-fBZx4dRB4w1HH-IAempcvXbXPoGzpOGc9UOrY3mdnv97AQI3E7lNMftC9OuJRrjYdc1iCWy6PktHos7Or_hdVEN5pWppiFqw-GGcbH3Ir5RIvO5kWebS4_OXx4t9DijULjVHSpTyqU',
+    uuid: 'c340839d-78c7-473e-8a68-7b216ef2e794',
+  };
   const users = fs.readFileSync('./app/data/main-data.json'); //use to test in index.js
   var userList = JSON.parse(users);
   let userFilter = userList.filter(
     (i) => i.user.pass_code == passCode && i.user.phone_number == phoneNumber
   );
+  console.log(userFilter);
   if (userFilter[0] != null) {
-    return userFilter[0];
+    console.log('rf', dummyToken.refresh_token, userFilter[0].user.uuid);
+    return {
+      refresh_token: dummyToken.refresh_token,
+      uuid: userFilter[0].user.uuid,
+    };
   }
 
-  return false;
+  return {
+    error: 'Internal Server Error',
+  };
 }
 
 function validatePassCode1(passCode, phoneNumber) {
@@ -56,7 +71,9 @@ function validatePassCode1(passCode, phoneNumber) {
     return userFilter[0];
   }
 
-  return false;
+  return {
+    error: 'Internal Server Error',
+  };
 }
 
 function getSpecificEmployee(id) {
