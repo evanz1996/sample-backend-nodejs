@@ -1,1 +1,57 @@
-[{"user":{"uuid":"c340839d-78c7-473e-8a68-7b216ef2e794","email":"asterginete@gmail.com","phone_number":"+817040265994","is_staff":0,"is_superuser":true},"profile":{"name":"Aster Ginete","date_of_birth":"0001-01-01T00:00:00Z","facebook":"","instagram":"","tiktok":"","clubhouse":"","twitter":"","linkedin":"","location":"","education":"","job":"","bio":"","background_photo":"","user_level":0}},{"user":{"uuid":"420f3dfa-2774-44da-92ef-e8d273b68e64","email":"vanessavalenzuela@gmail.com11","phone_number":"09096254204","password":"vanessa11","phone_verified":true,"deleted":false,"user_state":"active","is_staff":false,"is_superuser":true,"pass_code":"1234"},"profile":{"name":"Vanessa Valenzuela11","gender":"Female","date_of_birth":"2022-01-14","facebook":"www.facebook.com/vanessa11","instagram":"www.instagram.com/vanessa1instagram11","tiktok":"www.tiktok.com/vanessa1instagram11","clubhouse":"www.clubhouse.com/vanessa1","twitter":"www.twitter.com/vanessa1instagram11","linkedin":"www.linkedin.com/vanessa1instagram11","location":" F. Roman St, Brgy. Balong Bato ,San Juan City , Philippines1","education":"Marinduque State College","job":"job11","bio":"This is my official biography. There are three versions on this page: A long version, a short version, and a mini version. There are also different sized photos at the bottom","background_photo":"https://lh3.googleusercontent.com/EsnD6K5KZEIKSSKKUSJHGKohOL_dYtVoh5yE-dSCOQIHtBO6DhsvzaZrKeekRJ6tUDHCSbXngfi0Gn_CQewkt8IprTA5bWwmShrEPwABug","user_level":"0"}}]
+[
+  {
+    "user": {
+      "uuid": "c340839d-78c7-473e-8a68-7b216ef2e794",
+      "email": "asterginete@gmail.com",
+      "phone_number": "+817040265994",
+      "is_staff": 0,
+      "is_superuser": 1
+    },
+    "profile": {
+      "name": "Aster Ginete",
+      "date_of_birth": "0001-01-01T00:00:00Z",
+      "facebook": "",
+      "instagram": "",
+      "tiktok": "",
+      "clubhouse": "",
+      "twitter": "",
+      "linkedin": "",
+      "location": "",
+      "education": "",
+      "job": "",
+      "bio": "",
+      "background_photo": "",
+      "user_level": 0
+    }
+  },
+  {
+    "user": {
+      "uuid": "420f3dfa-2774-44da-92ef-e8d273b68e64",
+      "email": "vanessavalenzuela@gmail.com11",
+      "phone_number": "09096254204",
+      "password": "vanessa11",
+      "phone_verified": true,
+      "deleted": false,
+      "user_state": "active",
+      "is_staff": 0,
+      "is_superuser": 1,
+      "pass_code": "1234"
+    },
+    "profile": {
+      "name": "Vanessa Valenzuela1",
+      "date_of_birth": "2022-01-14",
+      "facebook": "www.facebook.com/vanessa11",
+      "instagram": "www.instagram.com/vanessa1instagram11",
+      "tiktok": "www.tiktok.com/vanessa1instagram11",
+      "clubhouse": "www.clubhouse.com/vanessa1",
+      "twitter": "www.twitter.com/vanessa1instagram11",
+      "linkedin": "www.linkedin.com/vanessa1instagram11",
+      "location": " F. Roman St, Brgy. Balong Bato ,San Juan City , Philippines1",
+      "education": "Marinduque State College",
+      "job": "job11",
+      "bio": "This is my official biography. There are three versions on this page: A long version, a short version, and a mini version. There are also different sized photos at the bottom",
+      "background_photo": "https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9jdXN8ZW58MHx8MHx8&w=1000&q=80",
+      "user_level": "0"
+    }
+  }
+]
